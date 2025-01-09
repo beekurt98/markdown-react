@@ -7,6 +7,7 @@
   --orange: #E46643;
   --lightorange: #F39765;
   --blackish: #1D1F22;
+  --middlegray: #E4E4E4;
 }
 
 body {
@@ -32,11 +33,29 @@ button {
   background-color: var(--blackish);
   width: 250px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: var(--grayFont);
+  font-size: 14px;
+  margin: 30px;
 }
 
 .add-new-btn {
   background-color: var(--orange);
   color: white;
+  height: 40px;
+  width: 150px;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.add-new-btn:hover {
+  background-color: var(--lightorange);
 }
 
 .file {
@@ -51,8 +70,10 @@ button {
   margin: 0;
 }
 
-.file h3:hover {
-  color: var(--orange);
+.file:hover {
+  h3 {
+    color: var(--orange);
+  }
 }
 
 /* .file h3::after {
@@ -66,27 +87,76 @@ header {
   color: white;
   display: flex;
   flex-direction: row;
+  gap: 20px;
   align-items: center;
-  height: 10vh;
+  height: 72px;
+}
+
+h1 {
+  margin-left: 15px;
+  font-size: large;
+}
+
+.horizontal-line {
+  border-left: 1px solid #5A6069;
+  height: 60%;
 }
 
 .header-btn {
   height: 30px;
 }
 
+.file-name-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  p {
+    color: var(--grayFont);
+    margin: 0;
+  }
+  input {
+    margin: 0;
+    background-color: var(--darkgray);
+    border: none;
+    color: white;
+    font-family: 'Roboto';
+  }
+}
+
 .left-menu-btn {
   background-color: var(--lmodeFont);
   height: 100%;
-  width: 10vh;
+  width: 72px;
 }
 
 .delete-file-btn {
   background-color: var(--darkgray);
+  margin-left: auto;
+}
+
+.delete-file-btn:hover {
+  svg path {
+    fill: var(--orange);
+  }
 }
 
 .save-changes-btn {
   background-color: var(--orange);
   color: white;
+  border-radius: 4px;
+  height: 50%;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+.save-changes-btn:hover {
+  background-color: var(--lightorange);
 }
 
 /* MAIN CONTAINER */
@@ -96,12 +166,32 @@ header {
   height: 80%;
   flex-direction: column;
   background-color: aqua;
-  width: 100%;
+  width: 100vw;
+}
+
+.gray-title {
+  background-color: var(--lightgray);
+  color: var(--grayFont);
+  font-family: 'Roboto';
+  height: 5vh;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    margin: 0;
+    margin-left: 10px;
+  }
+}
+
+.eye-btn {
+  background-color: var(--lightgray);
+  margin-right: 10px;
 }
 
 .text-contents {
   gap: 5px;
-  background-color: rgb(193, 193, 193);
+  background-color: var(--middlegray);
   display: flex;
   flex-direction: row;
 }
@@ -118,7 +208,7 @@ header {
 
 textarea {
   width: 99%;
-  height: 90vh;
+  height: 85vh;
   resize: none;
   border: none;
   font-family: 'Roboto Mono';
