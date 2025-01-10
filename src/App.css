@@ -31,16 +31,16 @@ button {
 
 .left-menu-cont {
   background-color: var(--blackish);
-  width: 250px;
+  width: 350px;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 h2 {
   color: var(--grayFont);
   font-size: 14px;
-  margin: 30px;
 }
 
 .add-new-btn {
@@ -62,11 +62,20 @@ h2 {
   color: white;
   cursor: pointer;
   display: flex;
+  gap: 10px;
   flex-direction: row;
   align-items: center;
+  margin:10px;
+  p {
+    color: var(--grayFont);
+    font-weight: 300;
+  }
+  h3 {
+    font-weight: 400;
+  }
 }
 
-.file h3 {
+.file h3, .file p {
   margin: 0;
 }
 
@@ -74,6 +83,10 @@ h2 {
   h3 {
     color: var(--orange);
   }
+}
+
+.theme-switch {
+  margin-top: auto;
 }
 
 /* .file h3::after {
@@ -110,16 +123,26 @@ h1 {
   display: flex;
   align-items: center;
   gap: 20px;
+
   p {
     color: var(--grayFont);
     margin: 0;
   }
+
   input {
     margin: 0;
+    width: 300px;
     background-color: var(--darkgray);
     border: none;
     color: white;
     font-family: 'Roboto';
+  }
+
+  input:focus {
+    border-style: solid;
+    border-color: white;
+    border-width: 0 0 1px 0;
+    outline: none;
   }
 }
 
@@ -178,6 +201,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   p {
     margin: 0;
     margin-left: 10px;
@@ -196,7 +220,8 @@ h1 {
   flex-direction: row;
 }
 
-.left-area, .right-area {
+.left-area,
+.right-area {
   background-color: white;
   width: 100%;
   height: 90vh;
@@ -207,7 +232,7 @@ h1 {
 }
 
 textarea {
-  width: 99%;
+  width: 95%;
   height: 85vh;
   resize: none;
   border: none;
@@ -215,7 +240,28 @@ textarea {
 }
 
 textarea:focus {
-  border: none;
+  outline: none;
+}
+
+.output-preview {
+  padding-left: 20px;
+
+  blockquote {
+    background-color: var(--lightgray);
+    border-radius: 4px;
+    border-width: 0 0 0 4px;
+    border-style: solid;
+    border-color: var(--orange);
+    padding-inline: 30px;
+    padding: 5px 10px 5px 20px;
+    margin: 0;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0;
+  }
 }
 
 /* themes */
