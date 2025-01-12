@@ -7,7 +7,7 @@ function App() {
   const [lightTheme, setLightTheme] = useState(true)
   const [rawInput, setRawInput] = useState("")
   const [input, setInput] = useState("")
-  const [title, setTitle] = useState("welcome")
+  const [title, setTitle] = useState("welcome.md")
   const [leftMenu, setLeftMenu] = useState(false)
   const [isEditing, setEditing] = useState(false)
   const [allFiles, setAllFiles] = useState([{ title: "welcome", content: "", date: `${today.getDate()} ${(today.getMonth() + 1)} ${today.getFullYear()}` }])
@@ -143,7 +143,7 @@ function LeftMenu({ themeChange, openNewDoc, allFiles, loadFile }) {
                   </div>
                 </div>
               })
-              : "No files yet"
+              : ""
           }
         </div>
         <button className="theme-switch" onClick={themeChange}>
@@ -214,7 +214,7 @@ function DeleteDialog({ deleteDialogRef, handleDeleteDoc }) {
 
   return (
     <>
-      <dialog ref={deleteDialogRef}>
+      <dialog className='delete-dialog' ref={deleteDialogRef}>
         <h4>Delete this document?</h4>
         <p>Are you sure you want to delete the ‘welcome.md’ document and its contents? This action cannot be reversed.</p>
         <button className="confirm-delete-btn" onClick={handleDeleteDoc}>Confirm & Delete</button>
