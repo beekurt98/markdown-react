@@ -1,11 +1,12 @@
 import { useRef, useState } from 'react'
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 import './App.css'
+import { markdownContent } from './initial-text';
 
 function App() {
   const today = new Date()
   const [lightTheme, setLightTheme] = useState(true)
-  const [rawInput, setRawInput] = useState("")
+  const [rawInput, setRawInput] = useState(markdownContent)
   const [input, setInput] = useState("")
   const [title, setTitle] = useState("welcome.md")
   const [leftMenu, setLeftMenu] = useState(false)
