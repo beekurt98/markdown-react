@@ -172,7 +172,7 @@ export default function App() {
         <DeleteDialog />
         <div className="text-contents">
           {visible && (
-            <div className="left-area">
+            <div className="left-area area">
               <div className="markdown-title gray-title">
                 <p>MARKDOWN</p>
               </div>
@@ -180,7 +180,7 @@ export default function App() {
             </div>
           )}
 
-          <div className="right-area">
+          <div className="right-area area">
             <div className="preview-title gray-title">
               <p>PREVIEW</p>
               <button onClick={handleVisibility} className='eye-btn'>

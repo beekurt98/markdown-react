@@ -10,7 +10,7 @@ export default function UserInputArea() {
         ref={inputRef} 
         onChange={handleChange} 
         value={rawInput}
-        placeholder="Start typing your markdown here..."
+        placeholder="# Start typing your markdown here..."
       ></textarea>
     </div>
   )

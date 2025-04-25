@@ -7,7 +7,7 @@ export default function UserOutput() {
   return (
     <div 
       className='output-preview' 
-      dangerouslySetInnerHTML={{ __html: input || "<p>Nothing to preview</p>" }} 
+      dangerouslySetInnerHTML={{ __html: input }} 
     />
   )
 }
