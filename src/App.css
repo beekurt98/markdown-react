@@ -266,6 +266,7 @@ textarea {
   font-family: 'Roboto Mono';
   padding: 20px;
   overflow-y: scroll;
+  font-size: 14px;
 }
 
 textarea:focus {
@@ -538,6 +539,11 @@ dialog::backdrop {
 @media screen and (max-width: 580px) {
   body {
     width: 100vw;
+  }
+
+  .output-preview  {
+    padding-inline: 10px !important;
+
   }
 
   .user-input {
