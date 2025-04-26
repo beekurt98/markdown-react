@@ -16,6 +16,7 @@ body {
   width: 100vw;
   font-family: 'Roboto';
   overflow-y: hidden;
+  background-color: var(--darkgray);
 }
 
 #root {
@@ -204,9 +205,10 @@ h1 {
 pre {
   background-color: var(--lightgray);
   color: #35393F;
-  width: 100%;
-  height: fit-content;
+  width: 80%;
+  height: 100%;
   padding: 24px;
+  overflow-x: scroll;
 }
 
 .gray-title {
@@ -533,7 +535,7 @@ dialog::backdrop {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
   body {
     width: 100vw;
   }
@@ -553,6 +555,10 @@ dialog::backdrop {
     display: none;
   }
 
+  input.file-name-input {
+    width: 75px;
+  }
+
   .markdown-title {
     .eye-btn {
       display: inherit;
@@ -564,7 +570,7 @@ dialog::backdrop {
   }
 
   .file-name-input {
-    width: 100px;
+    width: 75px;
   }
 
   .save-changes-btn {
